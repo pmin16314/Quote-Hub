@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 import "./App.css";
+import logo from "./Images/logos-01.svg";
 
 class App extends Component {
   state = { advice: "" };
@@ -27,12 +28,14 @@ class App extends Component {
     const { advice } = this.state;
     return (
       <div className='App'>
+        <img src={logo} className='logo' alt='logo'></img>
         <div className='card'>
           <h1 className='adviceHeading'>{advice}</h1>
           <button onClick={this.fetchAdvice}>
             <span>Give ne quote!</span>
           </button>
         </div>
+        <div className='footer'>Created by Panchana Madara &#169;</div>
       </div>
     );
   }
